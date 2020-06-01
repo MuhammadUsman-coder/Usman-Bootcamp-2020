@@ -31,4 +31,4 @@ jobs:
       with: 
         node-version: 12
     -name: Deploying using surge
-     run: surge ./ http://usmanbootcamp2020.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+     run: surge ./ usmanbootcamp2020.surge.sh --token ${{ secrets.SURGE_TOKEN }}
