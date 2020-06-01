@@ -24,11 +24,11 @@ jobs:
     # Runs a single command using the runners shell
     - name: installing node
     - uses: actions/setup-node@v2-beta
+      with:
+        node-version: 12
 
     # Runs a set of commands using the runners shell
     - name: install surge
       run: npm install --global surge
-      with: 
-        node-version: 12
-    -name: Deploying using surge
-     run: surge ./index.html usmanbootcamp2020.surge.sh --token "ed1a8f975cde0b66c1c516c6a7d6abb2"
+    - name: Deploying using surge
+      run: surge ./ usmanbootcamp2020.surge.sh --token "ed1a8f975cde0b66c1c516c6a7d6abb2"
